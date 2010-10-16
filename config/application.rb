@@ -46,6 +46,7 @@ module SampleApp
         ActiveSupport::Dependencies.mechanism = :load
       end
     end
+    config.filter_parameters += [:password]
 
   end
 end
