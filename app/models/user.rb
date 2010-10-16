@@ -46,8 +46,7 @@ class User < ActiveRecord::Base
   end
 
 
-   private
-
+  private
      def encrypt_password
        self.salt = make_salt if new_record?
        self.encrypted_password = encrypt(password)
@@ -64,6 +63,5 @@ class User < ActiveRecord::Base
      def secure_hash(string)
        Digest::SHA2.hexdigest(string)
      end
-
 
 end
